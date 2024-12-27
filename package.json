@@ -2,6 +2,13 @@
   "name": "slazy",
   "version": "1.0.0",
   "description": "A NestJS library for sending Slack notifications",
+  "keywords": [
+    "nestjs",
+    "slack",
+    "notifications",
+    "issue-tracker" ,
+    "decorator"
+  ],
   "main": "dist/slazy.module.js",
   "types": "dist/slazy.module.d.ts",
   "files": [
