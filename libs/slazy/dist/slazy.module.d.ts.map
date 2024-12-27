@@ -1,0 +1,1 @@
+{"version":3,"file":"slazy.module.d.ts","sourceRoot":"","sources":["../src/slazy.module.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAkB,MAAM,gBAAgB,CAAC;AAK/D,qBASa,WAAW;IACtB,MAAM,CAAC,UAAU,CAAC,MAAM,EAAE;QAAE,eAAe,EAAE,MAAM,CAAA;KAAE,GAAG,aAAa;CAqBtE"}
