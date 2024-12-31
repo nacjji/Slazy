@@ -1,15 +1,11 @@
-import { DynamicModule, Global, Module } from '@nestjs/common';
-import { APP_INTERCEPTOR, Reflector } from '@nestjs/core';
-import { SlazyInterceptor } from './interceptors/slazy.interceptor';
-import { SlazyService } from './slazy.service';
+import { DynamicModule, Global, Module } from "@nestjs/common";
+import { APP_INTERCEPTOR, Reflector } from "@nestjs/core";
+import { SlazyInterceptor } from "./interceptors/slazy.interceptor";
+import { SlazyService } from "./slazy.service";
 
 @Global()
 @Module({
-  providers: [
-    SlazyService,
-    Reflector,
-    { provide: APP_INTERCEPTOR, useClass: SlazyInterceptor },
-  ],
+  providers: [SlazyService, Reflector, { provide: APP_INTERCEPTOR, useClass: SlazyInterceptor }],
   exports: [SlazyService],
 })
 export class SlazyModule {
@@ -18,7 +14,7 @@ export class SlazyModule {
       module: SlazyModule,
       providers: [
         {
-          provide: 'SLACK_WEBHOOK_URL',
+          provide: "SLACK_WEBHOOK_URL",
           useValue: config.slackWebhookUrl,
         },
         {
@@ -28,10 +24,10 @@ export class SlazyModule {
             slazyService.setWebhookUrl(slackWebhookUrl);
             return slazyService;
           },
-          inject: ['SLACK_WEBHOOK_URL'],
+          inject: ["SLACK_WEBHOOK_URL"],
         },
       ],
-      exports: ['SLACK_WEBHOOK_URL', SlazyService],
+      exports: ["SLACK_WEBHOOK_URL", SlazyService],
     };
   }
 }
