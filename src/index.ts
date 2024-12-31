@@ -1,2 +1,2 @@
-export * from "./decorators/slazy.decorator";
-export * from "./slazy.module";
+export { Slazy } from "./decorators/slazy.decorator";
+export { SlazyModule } from "./slazy.module";

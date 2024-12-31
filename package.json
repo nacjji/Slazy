@@ -9,11 +9,18 @@
     "issue-tracker",
     "decorator"
   ],
-  "main": "dist/slazy.module.js",
-  "types": "dist/slazy.module.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "exports" :  {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        }
+    },
   "scripts": {
     "build": "tsc -p tsconfig.lib.json",
     "prepublishOnly": "npm run build"

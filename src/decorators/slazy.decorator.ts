@@ -6,6 +6,7 @@ export const SLACK_NOTIFY_KEY = "slackNotify";
  * @param options statusCode, message
  * @returns {MethodDecorator}
  */
+
 export function Slazy(options: { statusCode: number; message: string }): MethodDecorator {
   return function (target: any, key: string | symbol, descriptor: PropertyDescriptor): void {
     // 메타데이터에 알림 정보를 저장
