@@ -1,6 +1,6 @@
 {
   "name": "slazy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A NestJS library for sending Slack notifications",
   "keywords": [
     "nestjs",
@@ -14,13 +14,13 @@
   "files": [
     "dist"
   ],
-  "exports" :  {
-        ".": {
-            "types": "./dist/index.d.ts",
-            "import": "./dist/index.mjs",
-            "require": "./dist/index.cjs"
-        }
-    },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
     "build": "tsc -p tsconfig.lib.json",
     "prepublishOnly": "npm run build"
